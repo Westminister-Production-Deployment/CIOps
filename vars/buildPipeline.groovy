@@ -189,7 +189,7 @@ spec:
                         teamDomain: 'westminister',
                         tokenCredentialId: 'slack-bot-token'
                     )
-                    emailext body: "Docker image build for the ${JOB_BASE_NAME} service has failed! 😞\nRepository: DIGIT-OSS\nBranch: ${env.BRANCH.split('/')[-1]}\nPlease refer to this URL for more details: ${BUILD_URL}", subject: "Docker Image Build and Push Failed: ${JOB_BASE_NAME}", to: 'ibrahim@westminister.tech,cc:godwyn@westminister.tech,cc:raymond@westminister.tech,cc:devops.consulting@ongraph.com'
+                    emailext body: "Docker image build for the ${JOB_BASE_NAME} service has failed! 😞\nRepository: DIGIT-OSS\nBranch: ${env.BRANCH.split('/')[-1]}\nPlease refer to this URL for more details: ${BUILD_URL}/console", subject: "Docker Image Build and Push Failed: ${JOB_BASE_NAME}", to: 'ibrahim@westminister.tech,cc:godwyn@westminister.tech,cc:raymond@westminister.tech,cc:devops.consulting@ongraph.com'
                 }
             }
         }
