@@ -57,7 +57,7 @@ spec:
                         teamDomain: 'westminister',
                         tokenCredentialId: 'slack-bot-token'
                     )
-                    emailext body: "Deployment successful for ${env.Images} services in ${pipelineParams.environment} environment! 🎉", subject: "Successful Deployment: ${env.Images.split(':')[0]} in ${pipelineParams.environment}", to: 'mannan.siddiqui@ongraph.com,cc:devops.consulting@ongraph.com'
+                    emailext body: "Deployment successful for ${env.Images} services in ${pipelineParams.environment} environment! 🎉", subject: "Successful Deployment: ${env.Images.split(':')[0]} in ${pipelineParams.environment}", to: 'ibrahim@westminister.tech,cc:godwyn@westminister.tech,cc:raymond@westminister.tech,cc:devops.consulting@ongraph.com'
                 } else {
                     slackSend (
                         botUser: true,
@@ -67,7 +67,7 @@ spec:
                         teamDomain: 'westminister',
                         tokenCredentialId: 'slack-bot-token'
                     )
-                    emailext body: "Deployment failed for ${env.Images} services in ${pipelineParams.environment} environment! 😞\nPlease refer to this URL for more details: ${BUILD_URL}", subject: "Failed Deployment: ${env.Images.split(':')[0]} in ${pipelineParams.environment}", to: 'mannan.siddiqui@ongraph.com,cc:devops.consulting@ongraph.com'
+                    emailext body: "Deployment failed for ${env.Images} services in ${pipelineParams.environment} environment! 😞\nPlease refer to this URL for more details: ${BUILD_URL}", subject: "Failed Deployment: ${env.Images.split(':')[0]} in ${pipelineParams.environment}", to: 'ibrahim@westminister.tech,cc:godwyn@westminister.tech,cc:raymond@westminister.tech,cc:devops.consulting@ongraph.com'
                 }
             }
         }
